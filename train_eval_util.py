@@ -68,3 +68,12 @@ def evaluate(model, iterator, criterion, device):
             epoch_acc += acc.item()
         
     return epoch_loss / len(iterator), epoch_acc / len(iterator)
+
+
+import torch
+import torch.nn as nn
+def total_layers(model):
+    return sum([1 for m in model.modules() if isinstance(m, nn.Conv2d)]) - 2
+
+def total_params(model):
+     return sum(p.numel() for p in model.parameters() if p.requires_grad)
