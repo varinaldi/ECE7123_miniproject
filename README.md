@@ -4,7 +4,7 @@ The main task of this mini project is to create a ResNet trained on the CIFAR-10
 <br>
  The [initial run](ResNet32_100epoch.ipynb) of the model suggests an overfitting within the model and therefore requires modification in the residual block. The [modified model](model_dropout.py)  with dropout in the residual block manages to [predict](ResNet32_Dropout.ipynb)  with a test accuracy of 92.75%.
 
-<br>
+
 ![Result](plots/ResNet32_dropout.png)
 
 
